@@ -24,6 +24,7 @@ console.log(filterByRating(books))
 
 
 
+
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     const result: T[] = []
     for (let arr of arrays) {
@@ -99,7 +100,7 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
 
 const products = [
     { name: "Pen", price: 10 },
-    { name: "Notebook", price: 65 },
+    { name: "Notebook", price: 25 },
     { name: "Bag", price: 50 }
 ];
 
@@ -119,7 +120,7 @@ enum Day {
 }
 
 function getDayType(day: Day): string {
-    if (day === Day.Sunday) {
+    if (day === Day.Saturday || day === Day.Sunday) {
         return 'Weekend'
     } else {
         return "Weekday"
